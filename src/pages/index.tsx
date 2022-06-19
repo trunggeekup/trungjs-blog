@@ -23,6 +23,7 @@ export default function Index() {
           </h1>
           <span className="handle">@trung.js</span>
           <h2>Software Engineer</h2>
+          <p>I am a guy who craves to apply technology to solve people's problems.</p>
           <SocialList />
         </div>
       </div>

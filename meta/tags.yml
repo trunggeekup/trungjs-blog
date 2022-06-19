@@ -1,3 +1,7 @@
 tags:
-  - slug: welcome
-    name: welcome
+  - slug: introduction
+    name: introduction
+  - slug: frontend
+    name: frontend
+  - slug: material
+    name: material

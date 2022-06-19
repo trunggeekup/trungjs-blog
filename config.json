@@ -1,7 +1,7 @@
 {
   "base_url": "https://blog.trung.js.dev",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "site_title": "Trung.js Blog",
+  "site_description": "Trung.js Blog",
   "site_keywords": [
     {
       "keyword": "Next.js"

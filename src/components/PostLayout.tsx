@@ -1,4 +1,6 @@
 import React from "react";
+import lazyHydrate from 'next-lazy-hydrate';
+
 import Author from "./Author";
 import Copyright from "./Copyright";
 import Date from "./Date";
@@ -11,6 +13,8 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "@/lib/authors";
 import { getTag } from "@/lib/tags";
+
+import GisCus from './GisCus';
 
 type Props = {
   title: string;
@@ -81,6 +85,7 @@ export default function PostLayout({
           </ul>
         </article>
         <footer>
+          <GisCus />
           <div className={"social-list"}>
             <SocialList />
           </div>
