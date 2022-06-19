@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = ({
   pageExtensions: ["tsx"],
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -14,6 +16,7 @@ module.exports = ({
         },
       ]
     );
+    config.resolve.alias['@'] = path.resolve(__dirname);
     return config;
   },
 });
