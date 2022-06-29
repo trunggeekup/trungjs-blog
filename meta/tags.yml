@@ -5,3 +5,5 @@ tags:
     name: frontend
   - slug: material
     name: material
+  - slug: devops
+    name: devops
