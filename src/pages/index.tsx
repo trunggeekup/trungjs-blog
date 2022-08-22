@@ -13,9 +13,14 @@ import { SocialList } from "@/components/SocialList";
 export default function Index() {
   return (
     <Layout>
-      <BasicMeta url={"/"} />
-      <OpenGraphMeta url={"/"} />
-      <TwitterCardMeta url={"/"} />
+      <BasicMeta
+        url="https://blog.trungjs.dev"
+        title="Trung.js Blog"
+        description="I am a guy who craves to apply technology to solve people's problems."
+        author="trung.js"
+      />
+      <OpenGraphMeta url="https://blog.trungjs.dev" title="Trung.js Blog" description="I am a guy who craves to apply technology to solve people's problems." />
+      <TwitterCardMeta url="https://blog.trungjs.dev" title="Trung.js Blog" description="I am a guy who craves to apply technology to solve people's problems." />
       <div className="container">
         <div>
           <h1>
@@ -25,6 +30,9 @@ export default function Index() {
           <h2>Software Engineer</h2>
           <p>I am a guy who craves to apply technology to solve people's problems.</p>
           <SocialList />
+          <p>
+            <a href="https://www.buymeacoffee.com/trungjs" target="_blank">Buy me a coffee</a>
+          </p>
         </div>
       </div>
       <style jsx>{`
@@ -33,7 +41,7 @@ export default function Index() {
           align-items: center;
           justify-content: center;
           flex: 1 1 auto;
-          padding: 0 1.5rem;
+          padding: 0 2rem;
         }
         h1 {
           font-size: 2.5rem;

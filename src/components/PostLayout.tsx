@@ -99,7 +99,7 @@ export default function PostLayout({
               max-width: 36rem;
               width: 100%;
               margin: 0 auto;
-              padding: 0 1.5rem;
+              padding: 0 2rem;
               box-sizing: border-box;
               z-index: 0;
             }

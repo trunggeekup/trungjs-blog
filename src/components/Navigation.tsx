@@ -58,7 +58,7 @@ export default function Navigation() {
             li {
               margin-bottom: 1.75rem;
               font-size: 2rem;
-              padding: 0 1.5rem 0 0;
+              padding: 0 2rem 0 0;
             }
             li:last-child {
               margin-bottom: 0;
