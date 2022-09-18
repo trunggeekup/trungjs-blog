@@ -1,5 +1,4 @@
 import React from "react";
-import lazyHydrate from 'next-lazy-hydrate';
 
 import Author from "./Author";
 import Copyright from "./Copyright";
@@ -34,7 +33,7 @@ export default function PostLayout({
   description = "",
   children,
 }: Props) {
-  const keywords = tags.map(it => getTag(it).name);
+  const keywords = tags.map(it => getTag(it)?.name);
   const authorName = getAuthor(author).name;
   return (
     <Layout>

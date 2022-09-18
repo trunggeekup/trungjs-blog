@@ -1,6 +1,6 @@
 .content {
   font-family: "Ubuntu", sans-serif;
-  color: #222;
+  color: var(--neutral-0-color);
   font-weight: 200;
 }
 

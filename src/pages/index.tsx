@@ -1,4 +1,5 @@
-import { GetStaticProps, GetStaticPaths } from "next";
+import { GetStaticProps } from "next";
+import Ztext from 'react-ztext'
 
 import config from "@/lib/config";
 import { countPosts, listPostContent, PostContent } from "@/lib/posts";
@@ -24,7 +25,16 @@ export default function Index() {
       <div className="container">
         <div>
           <h1>
-            Hi, I'm <span className="fancy">Trung.js.</span>
+            Hi, I'm <Ztext
+              depth='1rem'
+              direction='both'
+              event='pointer'
+              eventRotation='15deg'
+              eventDirection='default'
+              fade={false}
+              layers={5}
+              perspective='700px'
+            ><span className="fancy">Trung.js</span></Ztext>
           </h1>
           <span className="handle">@trung.js</span>
           <h2>Software Engineer</h2>
@@ -54,7 +64,7 @@ export default function Index() {
           line-height: 1.25;
         }
         .fancy {
-          color: #15847d;
+          color: var(--primary-color);
         }
         .handle {
           display: inline-block;

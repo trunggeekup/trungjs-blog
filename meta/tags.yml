@@ -3,7 +3,11 @@ tags:
     name: introduction
   - slug: frontend
     name: frontend
+  - slug: backend
+    name: backend
   - slug: material
     name: material
   - slug: devops
     name: devops
+  - slug: design-patterns
+    name: design-patterns

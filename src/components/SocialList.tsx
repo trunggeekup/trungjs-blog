@@ -40,7 +40,7 @@ export function SocialList({ }) {
             target="_blank"
             rel="noopener"
           >
-            <social.Icon width={24} height={24} fill={"#222"} />
+            <social.Icon width={24} height={24} fill="currentColor" />
           </a>
         ))
       }
