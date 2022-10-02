@@ -62,40 +62,42 @@ export default function PostLayout({
         description={description}
       />
       <div className={"container"}>
-        <article>
-          <header>
-            <h1>{title}</h1>
-            <div className={"metadata"}>
-              <div>
-                <Date date={date} />
+        <div className="max-w-screen-lg w-4/5 mx-auto">
+          <article>
+            <header>
+              <h1 className="font-bold">{title}</h1>
+              <div className={"metadata"}>
+                <div>
+                  <Date date={date} />
+                </div>
+                <div>
+                  <Author author={getAuthor(author)} />
+                </div>
               </div>
-              <div>
-                <Author author={getAuthor(author)} />
-              </div>
+            </header>
+            <div className="content">{children}</div>
+            <ul className={"tag-list"}>
+              {tags.map((it, i) => (
+                <li key={i}>
+                  <TagButton tag={getTag(it)} />
+                </li>
+              ))}
+            </ul>
+          </article>
+          <footer>
+            <GisCus />
+            <div className={"social-list"}>
+              <SocialList />
             </div>
-          </header>
-          <div className="content">{children}</div>
-          <ul className={"tag-list"}>
-            {tags.map((it, i) => (
-              <li key={i}>
-                <TagButton tag={getTag(it)} />
-              </li>
-            ))}
-          </ul>
-        </article>
-        <footer>
-          <GisCus />
-          <div className={"social-list"}>
-            <SocialList />
-          </div>
-          <Copyright />
-        </footer>
+            <Copyright />
+          </footer>
+        </div>
       </div>
+      <div className="w-28" />
       <style jsx>
         {`
             .container {
               display: block;
-              max-width: 36rem;
               width: 100%;
               margin: 0 auto;
               padding: 0 2rem;

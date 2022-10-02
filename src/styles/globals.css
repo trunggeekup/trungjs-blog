@@ -1,33 +1,21 @@
+@import "./tailwind.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-:root {
-  --primary-color: #15847d;
-  --neutral-0-color: var(--neutral-0-color);
-}
+@import "/styles/content.module.css";
 
 html,
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: #fff;
-  color: var(--neutral-0-color);
+  color: var(--color-neutral-900);
   font-weight: 200;
   height: 100%;
 }
 
 #__next {
   height: 100%;
-}
-
-a {
-  color: #9b9b9b;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:active,
-a:hover {
-  color: var(--primary-color);
 }
 
 .youtube-container {

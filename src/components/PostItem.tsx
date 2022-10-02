@@ -16,7 +16,7 @@ export default function PostItem({ post }: Props) {
         <style jsx>
           {`
             a {
-              color: var(--neutral-0-color);
+              color: var(--color-neutral-900);
               display: inline-block;
             }
             h2 {

@@ -1,9 +1,9 @@
-import React from "react";
+import classnames from 'classnames';
+import config from "@/lib/config";
 import Twitter from "../assets/twitter-alt.svg";
 import GitHub from "../assets/github-alt.svg";
 import LinkedIn from "../assets/linkedin-alt.svg";
 import Facebook from "../assets/facebook-f.svg";
-import config from "@/lib/config";
 
 const data = [
   {
@@ -28,9 +28,9 @@ const data = [
   },
 ];
 
-export function SocialList({ }) {
+export function SocialList({ className = '' }) {
   return (
-    <div>
+    <div className={classnames("flex gap-8", className)}>
       {
         data.map(social => (
           <a
@@ -44,14 +44,6 @@ export function SocialList({ }) {
           </a>
         ))
       }
-      <style jsx>{`
-        a {
-          display: inline-block;
-        }
-        a:not(:last-child) {
-          margin-right: 2em;
-        }
-      `}</style>
     </div>
   );
 }

@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-neutral-900: theme('colors.neutral.900');
+    --color-primary: theme('colors.primary.DEFAULT');
+  }
+
+  h1 {
+    @apply text-5xl mb-3;
+  }
+  h2 {
+    @apply text-3xl mb-2;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+
+  h6 {
+    @apply text-base;
+  }
+
+  a {
+    @apply text-gray-600 cursor-pointer;
+    @apply hover:text-primary active:text-primary;
+    transition: color 0.3s ease;
+  }
+  p {
+    @apply mb-4;
+  }
+}
+
+@layer components {
+  .burger {
+    @apply fixed cursor-pointer top-[1.25rem] left-[1.25rem] z-10 h-9 w-9;
+
+    .meat {
+      @apply absolute w-7 h-[2px] bg-neutral-900;
+      @apply top-[calc(50%-2px/2)] left-[calc(50%-28px/2)];
+      @apply transition-all;
+
+      &.meat-1 {
+        @apply translate-y-[-10px];
+      }
+
+      &.meat-2 {
+        @apply w-[22px];
+      }
+
+      &.meat-3 {
+        @apply translate-y-[10px];
+      }
+    }
+
+    &.active {
+      .meat-1 {
+        @apply translate-y-0 rotate-45;
+      }
+
+      .meat-2 {
+        @apply opacity-0
+      }
+
+      .meat-3 {
+        @apply translate-y-0 -rotate-45;
+      }
+    }
+  }
+
+  blockquote {
+    @apply my-4 py-2 bg-gray-100 border-l-4 border-gray-600;
+    @apply relative;
+
+    &::before {
+      @apply absolute text-6xl text-gray-500 top-0;
+      content: "\201C";
+      font-family: roboto, serif;
+    }
+
+    p {
+      @apply pl-8 mb-0;
+    }
+  }
+}

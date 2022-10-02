@@ -15,7 +15,7 @@ type Props = {
 };
 export default function PostList({ posts, tags, pagination }: Props) {
   return (
-    <div className={"container"}>
+    <div className={"lg:ml-8 w-full flex px-8 gap-4"}>
       <div className={"posts"}>
         <ul className={"post-list"}>
           {posts.map((it, i) => (
@@ -41,13 +41,6 @@ export default function PostList({ posts, tags, pagination }: Props) {
         ))}
       </ul>
       <style jsx>{`
-        .container {
-          display: flex;
-          margin: 0 auto;
-          max-width: 1120px;
-          width: 100%;
-          padding: 0 2rem;
-        }
         ul {
           margin: 0;
           padding: 0;
